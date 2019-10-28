@@ -9,7 +9,7 @@ exports.main = async (event, context) => {
     const result = await db.collection('messages').add({
       data: {
         touser: OPENID,
-        page: 'index',
+        page: '/pages/index/index',
         data: event.data,
         templateId: event.templateId,
         done: false, // 消息发送状态设置为 false
